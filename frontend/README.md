@@ -1,4 +1,4 @@
-Serves as an interface for the application. 
+React interface for the application. 
 It allows users to 
 - request documents based on various parameters
 - display documents
