@@ -15,9 +15,10 @@
 #     app.run(host='0.0.0.0', port=105)
 
 # fastapi version
-import from fastapi import FastApi
+from fastapi import FastApi
 
 app = FastAPI()
+
 
 @app.get("/")
 async def root():
@@ -28,8 +29,10 @@ from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/flasksql'
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgresql://postgres:password@localhost/flasksql"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.secret_key = 'secret string'
+app.secret_key = "secret string"
 
 db = SQLAlchemy(app)
