@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from backend.sec.query_edgar import query_edgar
+from ../sec import query_edgar
 
 app = FastAPI()
 
@@ -18,4 +20,11 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
-    return {"message": "Welcome to your todo list."}
+    return {"message": "Default route for api"}
+
+
+@app.get("/sec")
+async def read_doc() -> dict:
+    return {
+        "documentName": "Document content asjdfkajskfdl;jsdkfl;ajkfl;dsajkfl;asjkl;f"
+    }
