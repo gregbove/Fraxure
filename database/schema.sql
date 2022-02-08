@@ -27,8 +27,8 @@ CREATE TABLE DocumentSection (
 
 -- references a document section, and specifically a set of words within the section
 -- associates a tag with the words
-DROP TABLE IF EXISTS EntityLabel;
-CREATE TABLE EntityLabel (
+-- DROP TABLE IF EXISTS EntityLabel;
+-- CREATE TABLE EntityLabel (
     
-);
+-- );
 
