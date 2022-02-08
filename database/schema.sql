@@ -18,3 +18,7 @@ CREATE TABLE DocumentSection (
 CREATE TABLE EntityLabel (
     
 );
+
+CREATE TABLE Jobs (
+    
+);
