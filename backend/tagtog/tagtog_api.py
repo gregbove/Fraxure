@@ -1,3 +1,6 @@
+# contains functions for interacting with tagtog API
+# originally came from https://docs.tagtog.net/API_documents_v1
+
 import requests
 import os
 
