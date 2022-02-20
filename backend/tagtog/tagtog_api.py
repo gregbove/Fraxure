@@ -52,17 +52,16 @@ def import_pdf():
   print(response.text)
   
 def import_markdown_file():
-  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  auth = get_auth()
   params = {"owner": "yourUsername", "project": "yourProjectName", "output": "null"}
   files = [("files", open('files/readme.md'))]
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
   
 def import_file_list():
-  auth = requests.auth.HTTPBasicAuth(username="yourUsername", password="yourPassword")
+  auth = get_auth()
   params = {"owner": "yourUsername", "project": "yourProjectName", "output": "null"}
   files = [("files", open('files/item1.txt')), ("files", open('files/item2.txt')), ("files", open('files/item3.txt'))]
   response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
   print(response.text)
-  
-def 
+ 
