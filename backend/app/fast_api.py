@@ -1,7 +1,12 @@
+# api
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.sec.query_edgar import query_edgar
+# sec
+import sec
+
+# tagtog
+import tagtog
 
 app = FastAPI()
 
@@ -22,8 +27,11 @@ async def read_root() -> dict:
     return {"message": "Default route for api"}
 
 
-@app.get("/sec")
-async def read_doc() -> dict:
-    return {
-        "documentName": "Document content asjdfkajskfdl;jsdkfl;ajkfl;dsajkfl;asjkl;f"
-    }
+@app.get("/sec/{document_id}")
+async def get_sec_doc(document_id) -> dict:
+    return sec.query_edgar(document_id)
+
+
+@app.get("/tagtog/{document_id}")
+async def get_tagtog_doc(document_id) -> dict:
+    return tagtog.get_document(document_id)
