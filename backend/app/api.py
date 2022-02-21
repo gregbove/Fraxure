@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.sec.query_edgar import query_edgar
-from ../sec import query_edgar
 
 app = FastAPI()
 
