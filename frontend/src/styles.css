@@ -5,21 +5,56 @@
 }
 * {  
   color: var(--fontColor);
-  font-family: helvetica;
-}
-body {
-  background: var(--bg);
+  font-family: helvetica; 
+  margin: 0;
+  padding: 0;
+  
 }
 
+head {
+  margin:0;
+  height: 0;
+}
+title {
+  margin:0;
+  height: 0;
+}
 body {
+  padding: auto;
+  background: var(--bg);
   font-family: monospace;
+} 
+
+h1 {
+  margin:0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: fantasy;
+}
+
+h2 { 
+  margin:8px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 20px; 
+}
+
+h3 { 
+  margin:8px; 
+  font-weight: lighter;
+  font-size: 20px; 
+  line-height: 0;
 }
 
 p {
-  margin:5px
+  margin:8px; 
+  padding:8px;
+
 }
 
 ul {
+  margin:8px;
   font-family: helvetica;
 }
 
@@ -29,12 +64,13 @@ ul {
 
 
 li {
+  margin:30px;
   list-style: none;
-  padding:5px;
+  padding:8px;
   font-size: 20px; 
 }
 
-.list {
+.list { 
   list-style: square;
   font-size: 40px;
 }
@@ -58,6 +94,13 @@ li {
     --btnFontColor: var(--black);
   }
 
+  .bad-theme {
+    --bg: var(--green);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--white);
+  }
+
 .btn {
   position: absolute;
   top: 30px;
@@ -73,14 +116,14 @@ li {
 .btn:focus { outline-style: none; }
 
 #myInput {
+  margin:15px;
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 80%; /* Full-width */
+  width: 40%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 10px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */ 
+  border: 1px solid #ddd; /* Add a grey border */ 
 }
 
 #myUL {
@@ -90,7 +133,7 @@ li {
   margin: 0; 
 }
 
-#myUL li a {
+#myUL li a { 
   border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /* Grey background color */
@@ -106,16 +149,8 @@ li {
 
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } 
+ 

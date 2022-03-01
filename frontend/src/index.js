@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import MyComponent from "./MyComponent";
 
 function App() {
-  return <div><MyComponent /></div>;
+  return <div><MyComponent /></div>; 
 }
 
 const rootElement = document.getElementById("root");
@@ -11,20 +11,24 @@ render(<App />, rootElement);
 
 // https://stackoverflow.com/questions/41956465/how-to-create-multiple-page-app-using-react
 
-
 const switcher = document.querySelector('.btn');
 
-switcher.addEventListener('click', function() { 
-    document.body.classList.toggle('dark-theme'); 
+switcher.addEventListener('click', function() {   
+    var element = document.getElementById('body');
+    var class_ = element.className;
 
-    var className = document.body.className;
-    if(className === "light-theme") {
+    if (class_ === "dark-theme") {
+        console.log('Dark theme --> Light Theme'); 
+        element.classList.toggle('dark-theme'); 
+        element.classList.toggle('light-theme');   
+        this.textContent = "Light"; 
+    }  
+    else if(class_ === "light-theme") {
+        console.log('Light theme --> Dark Theme'); 
+        element.classList.toggle('light-theme');  
+        element.classList.toggle('dark-theme');  
         this.textContent = "Dark"; 
-    }
-    else {
-        this.textContent = "Light";  
-    }
-
-    console.log('current class name: ' + className);
+    } 
+    console.log('current class name: ' + class_);
 
 });
