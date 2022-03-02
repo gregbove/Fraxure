@@ -18,26 +18,29 @@ const MyComponent = () => {
       TITLE
   </title>
   <body id="body" class="light-theme">
+    <button class="mbtn" >Light</button>
     <h1>Fracture</h1>
     <h2>A user friendly web interface for facilitating the process of gathering information from SEC.org</h2>
     <h2>We hope this site closely resembles that of the SEC so that searches performed there can easily be performed here</h2>
+    <button class="linkbtn" >Go to SEC.org</button>  
     <p id="msg"></p> 
     <ul> 
-      <button class="btn" >Light</button>   
+       
       <h3 id="search1">Document word or phrase</h3> 
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Keywords to search for in filing documents" /> 
       <h3 id="search2">Company name, ticker, CIK number or individual's name</h3>
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Company name, ticker, CIK number or individual's name" />
-      <h3 id="search3">Filing types</h3>
+      <h3 id="search3">Filing types (10-K)</h3>
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter the filing types"/> 
       <h3 id="search3">Filed date range</h3>
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select from the dropdown"/> 
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select from the dropdown (Empty for all, otherwise enter 'yyyy-mm-dd, yyyy-mm-dd'"/> 
       <h3 id="search3">Principle executive offices in</h3>
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select a state"/>  
-    </ul> 
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select a state"/>    
+    </ul>  
+    <button class="searchbtn" >SEARCH</button>  
     <script src="./index.js"></script>
     <noscript>You need to enable JavaScript to view the full site.</noscript> 
-  </body>
+  </body> 
   </div>
   </html>; 
 };
