@@ -1,5 +1,5 @@
 :root {
-  --green: #1680d6;
+  --blue: #c4dcfa;
   --white: #ffffff;
   --black: #000000;
 }
@@ -7,9 +7,10 @@
   color: var(--fontColor);
   font-family: helvetica; 
   margin: 0;
-  padding: 0;
-  
+  padding: 0; 
 }
+
+html{background-color: var(--blue);}
 
 head {
   margin:0;
@@ -22,7 +23,7 @@ title {
 body {
   padding: auto;
   background: var(--bg);
-  font-family: monospace;
+  font-family: monospace;  
 } 
 
 h1 {
@@ -53,9 +54,9 @@ p {
 
 }
 
-ul {
+ul { 
   margin:8px;
-  font-family: helvetica;
+  font-family: helvetica;  
 }
 
 .id {
@@ -81,7 +82,7 @@ li {
 }
 
   .light-theme {
-    --bg: var(--green);
+    --bg: var(--blue);
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--white);
@@ -89,16 +90,9 @@ li {
 
   .dark-theme {
     --bg: var(--black);
-    --fontColor: var(--green);
+    --fontColor: var(--blue);;
     --btnBg: var(--white);
     --btnFontColor: var(--black);
-  }
-
-  .bad-theme {
-    --bg: var(--green);
-    --fontColor: var(--green);
-    --btnBg: var(--white);
-    --btnFontColor: var(--white);
   }
 
 .mbtn {
@@ -144,6 +138,23 @@ li {
 
 .searchbtn:focus { outline-style: none; }
 
+.dwnldbtn:focus { outline-style: none; }
+
+.backbtn { 
+  flex-direction: row;
+  margin-left: 15%;
+  -ms-transform: translate(-50%, -0%);  
+  transform: translate(-50%, -0%);
+  position:relative; 
+  height: 50px;    
+  padding-left: 50px;
+  padding-right: 50px; 
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+.backbtn:focus { outline-style: none; }
+
 #myInput {
   margin:15px;
   background-image: url('/css/searchicon.png'); /* Add a search icon to input */
@@ -182,4 +193,59 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } 
- 
+
+table, tr, td {
+  border: 1px solid;
+}
+
+table {
+  text-size-adjust:100px; 
+  margin-left: 50%;
+  -ms-transform: translate(-50%, -0%);  
+  transform: translate(-50%, -0%);
+  width: 80%;
+}
+
+tr {
+  text-size-adjust: 100px;
+  padding: 80px;
+}
+
+td {
+  text-size-adjust: 100px;
+  text-align: center;
+  padding: 10px;
+}  
+
+button { 
+  flex-direction: row; 
+  position:relative; 
+  height: 50px;    
+  padding-left: 50px;
+  padding-right: 50px; 
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+} 
+
+.dwnldbtn {  
+  margin-left: 55%; 
+  width: 200px;
+}
+
+.left {
+  margin-left:15%; 
+}
+.right { 
+  margin-left:55%;
+}
+
+button:focus { outline-style: none; }
+
+.buttons {
+  flex-direction: row;
+}
+
+form {
+  display: inline;
+  
+}
