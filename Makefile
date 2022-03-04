@@ -1,23 +1,22 @@
 .PHONY: run clean
 
-
 VENV = venv
-PYTHON = $(VENV)/bin/python3
+PYTHON = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
 
-build: 
-	$(PIP) freeze > requirements.txt
-
-
-run: $(VENV)/bin/activate
+venv: venv/touchfile
+	source venv/bin/activate
 	$(PYTHON) backend/app/app.py
 
+venv/touchfile: requirements.txt
+	test -d venv || virtualenv venv
+	. venv/bin/activate; pip install -Ur requirements.txt
+	touch venv/touchfile
 
-$(VENV)/bin/activate: requirements.txt
-	python3 -m venv $(VENV)
-	$(PIP) install -r requirements.txt
-
+run:
+	$(PYTHON) backend/app/app.py
 
 clean:
-	rm -rf __pycache__
 	rm -rf $(VENV)
+	find -iname "__pycache__" -delete
+	find -iname "*.pyc" -delete
