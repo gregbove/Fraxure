@@ -2,19 +2,12 @@
 
 from flask import Flask, send_from_directory
 
-app = Flask(
-    "Fraxure", static_url_path="/page", static_folder="../frontend/build/static"
-)
+app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 
 
-@app.route("/page/")
-def serve_static_react():
-    return send_from_directory("/static", "index.html")
-
-
-# @app.route("/")
-# def index():
-#     return "Index Page"
+@app.route("/")
+def index():
+    return app.send_static_file("index.html")
 
 
 @app.route("/api/")
@@ -23,4 +16,4 @@ def api_route():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
