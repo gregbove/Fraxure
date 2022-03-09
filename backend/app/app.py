@@ -1,15 +1,15 @@
 # https://towardsdatascience.com/build-deploy-a-react-flask-app-47a89a5d17d9
 
-from flask import Flask, send_from_directory, render_template
+from flask import Flask, send_from_directory
 
 app = Flask(
     "Fraxure", static_url_path="/page", static_folder="../frontend/build/static"
 )
 
 
-@app.route("/")
+@app.route("/page/")
 def serve_static_react():
-    return send_from_directory("index.html")
+    return send_from_directory("/static", "index.html")
 
 
 # @app.route("/")
