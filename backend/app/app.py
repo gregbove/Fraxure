@@ -12,6 +12,7 @@ def index():
 
 @app.route("/api/")
 def api_route():
+    print("this accesses the api")
     return "this accesses the api"
 
 
