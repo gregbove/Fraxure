@@ -10,9 +10,8 @@ def index():
     return app.send_static_file("index.html")
 
 
-@app.route("/api/")
+@app.route("/api")
 def api_route():
-    print("this accesses the api")
     return "this accesses the api"
 
 
