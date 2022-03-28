@@ -2,7 +2,7 @@ import time
 from flask import Flask
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask("fraxure_backend")
 CORS(app, origins=["http://localhost:3000"])
 
 
