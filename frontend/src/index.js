@@ -1,17 +1,20 @@
-import React from "react"; 
-import ReactDOM from "react-dom";  
-import "./styles.css"; 
-import App from './App';    
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles.css";
+import App from "./App";
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />,rootElement); 
+ReactDOM.render(<App />, rootElement);
 
 // https://stackoverflow.com/questions/41956465/how-to-create-multiple-page-app-using-react
 
-const linker = document.querySelector('.linkbtn');
-linker.addEventListener('click', function() {   
-    window.open('https://www.sec.gov/edgar/search/#/category=custom&forms=10-K', '_blank');
-    console.log('button clicked');
+const linker = document.querySelector(".linkbtn");
+linker.addEventListener("click", function () {
+  window.open(
+    "https://www.sec.gov/edgar/search/#/category=custom&forms=10-K",
+    "_blank"
+  );
+  console.log("button clicked");
 });
 
 /*
@@ -38,8 +41,8 @@ switcher.addEventListener('click', function() {
 });
 */
 
-const searcher = document.querySelector('.searchbtn');
-searcher.addEventListener('click', function() {   
-    // var element = document.getElementById('pagedisplay');
-    // var class_ = element.className;
+const searcher = document.querySelector(".searchbtn");
+searcher.addEventListener("click", function () {
+  // var element = document.getElementById('pagedisplay');
+  // var class_ = element.className;
 });

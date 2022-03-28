@@ -3,97 +3,97 @@
   --white: #ffffff;
   --black: #000000;
 }
-* {  
+* {
   color: var(--fontColor);
-  font-family: helvetica; 
+  font-family: helvetica;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
-html{background-color: var(--blue);}
+html {
+  background-color: var(--blue);
+}
 
 head {
-  margin:0;
+  margin: 0;
   height: 0;
 }
 title {
-  margin:0;
+  margin: 0;
   height: 0;
 }
 body {
   padding: auto;
   background: var(--bg);
-  font-family: monospace;  
-} 
+  font-family: monospace;
+}
 
 h1 {
-  margin:0px;
+  margin: 0px;
   text-align: center;
   font-weight: bold;
   font-size: 80px;
   font-family: fantasy;
 }
 
-h2 { 
-  margin:8px;
+h2 {
+  margin: 8px;
   text-align: center;
   font-weight: lighter;
-  font-size: 20px; 
+  font-size: 20px;
 }
 
-h3 { 
-  margin:8px; 
+h3 {
+  margin: 8px;
   font-weight: lighter;
-  font-size: 20px; 
+  font-size: 20px;
   line-height: 0;
 }
 
 p {
-  margin:8px; 
-  padding:8px;
-
+  margin: 8px;
+  padding: 8px;
 }
 
-ul { 
-  margin:8px;
-  font-family: helvetica;  
+ul {
+  margin: 8px;
+  font-family: helvetica;
 }
 
 .id {
   font-family: monospace;
 }
 
-
 li {
-  margin:30px;
+  margin: 30px;
   list-style: none;
-  padding:8px;
-  font-size: 20px; 
+  padding: 8px;
+  font-size: 20px;
 }
 
-.list { 
+.list {
   list-style: square;
   font-size: 40px;
 }
 
 #msg {
   font-size: large;
-  font-family: monospace; 
+  font-family: monospace;
 }
 
-  .light-theme {
-    --bg: var(--blue);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
-  }
+.light-theme {
+  --bg: var(--blue);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+}
 
-  .dark-theme {
-    --bg: var(--black);
-    --fontColor: var(--blue);;
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
-  }
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--blue);
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+}
 
 .mbtn {
   position: absolute;
@@ -107,73 +107,83 @@ li {
   background-color: var(--btnBg);
 }
 
-.mbtn:focus { outline-style: none; }
+.mbtn:focus {
+  outline-style: none;
+}
 
 .linkbtn {
-  margin:0;
-  position:relative; 
-  height: 50px;   
+  margin: 0;
+  position: relative;
+  height: 50px;
   left: 50%;
   padding-left: 50px;
   padding-right: 50px;
-  -ms-transform: translate(-50%, -0%);  
+  -ms-transform: translate(-50%, -0%);
   transform: translate(-50%, -0%);
   color: var(--btnFontColor);
   background-color: var(--btnBg);
 }
 
-.linkbtn:focus { outline-style: none; }
+.linkbtn:focus {
+  outline-style: none;
+}
 
-.searchbtn { 
+.searchbtn {
   margin-left: 25%;
-  -ms-transform: translate(-50%, -0%);  
+  -ms-transform: translate(-50%, -0%);
   transform: translate(-50%, -0%);
-  position:relative; 
-  height: 50px;    
+  position: relative;
+  height: 50px;
   padding-left: 50px;
-  padding-right: 50px; 
+  padding-right: 50px;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
 }
 
-.searchbtn:focus { outline-style: none; }
+.searchbtn:focus {
+  outline-style: none;
+}
 
-.dwnldbtn:focus { outline-style: none; }
+.dwnldbtn:focus {
+  outline-style: none;
+}
 
-.backbtn { 
+.backbtn {
   flex-direction: row;
   margin-left: 15%;
-  -ms-transform: translate(-50%, -0%);  
+  -ms-transform: translate(-50%, -0%);
   transform: translate(-50%, -0%);
-  position:relative; 
-  height: 50px;    
+  position: relative;
+  height: 50px;
   padding-left: 50px;
-  padding-right: 50px; 
+  padding-right: 50px;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
 }
 
-.backbtn:focus { outline-style: none; }
+.backbtn:focus {
+  outline-style: none;
+}
 
 #myInput {
-  margin:15px;
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  margin: 15px;
+  background-image: url("/css/searchicon.png"); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 50%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 10px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */ 
+  border: 1px solid #ddd; /* Add a grey border */
 }
 
 #myUL {
   /* Remove default list styling */
   list-style-type: none;
   padding: 0;
-  margin: 0; 
+  margin: 0;
 }
 
-#myUL li a { 
+#myUL li a {
   border: 1px solid #ddd; /* Add a border to all links */
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6; /* Grey background color */
@@ -181,27 +191,28 @@ li {
   text-decoration: none; /* Remove default text underline */
   font-size: 18px; /* Increase the font-size */
   color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */ 
+  display: block; /* Make it into a block element to fill the whole list */
 }
 
 #myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */ 
-
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-} 
+}
 
-table, tr, td {
+table,
+tr,
+td {
   border: 1px solid;
 }
 
 table {
-  text-size-adjust:100px; 
+  text-size-adjust: 100px;
   margin-left: 50%;
-  -ms-transform: translate(-50%, -0%);  
+  -ms-transform: translate(-50%, -0%);
   transform: translate(-50%, -0%);
   width: 80%;
 }
@@ -215,31 +226,33 @@ td {
   text-size-adjust: 100px;
   text-align: center;
   padding: 10px;
-}  
+}
 
-button { 
-  flex-direction: row; 
-  position:relative; 
-  height: 50px;    
+button {
+  flex-direction: row;
+  position: relative;
+  height: 50px;
   padding-left: 50px;
-  padding-right: 50px; 
+  padding-right: 50px;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
-} 
+}
 
-.dwnldbtn {  
-  margin-left: 55%; 
+.dwnldbtn {
+  margin-left: 55%;
   width: 200px;
 }
 
 .left {
-  margin-left:15%; 
+  margin-left: 15%;
 }
-.right { 
-  margin-left:55%;
+.right {
+  margin-left: 55%;
 }
 
-button:focus { outline-style: none; }
+button:focus {
+  outline-style: none;
+}
 
 .buttons {
   flex-direction: row;
@@ -247,5 +260,4 @@ button:focus { outline-style: none; }
 
 form {
   display: inline;
-  
 }
