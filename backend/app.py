@@ -16,7 +16,7 @@ def get_current_time():
 
 @app.route("/tagtog/init/<ttusername>/<ttpassword>")
 def init_tagtog(ttusername, ttpassword, projname):
-    s = SECTagTog(ttusername, ttpassword, "/", projname)
+    s = SECTagTog(ttusername, ttpassword, " ", projname)
 
 
 @app.route("/tagtog/post/<form_type>/<ticker>")
