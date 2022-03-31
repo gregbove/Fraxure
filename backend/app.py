@@ -6,7 +6,7 @@ from sectagtog.sec_tagtog import SECTagTog
 
 app = Flask("fraxure_backend")
 CORS(app, origins=["http://localhost:3000"])
-s = SECTagTog()
+s = ' '
 
 
 @app.route("/time")

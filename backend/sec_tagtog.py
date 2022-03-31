@@ -24,7 +24,7 @@ class SECTagTog:
         #Removes the files that were downloaded
         os.remove(self.dir+ "/" + company_tick + "_" + form_type + ".html")
         os.remove(self.dir+ "/" + "full-submission.txt")
- 
+
 
 def main():
     test_api = SECTagTog('ryanmurf9', 'testapipassword123', " ", "TestProject")
