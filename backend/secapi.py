@@ -18,6 +18,9 @@ class SECAPI:
     
     def getAllForCompanyQuery(self, form_name, company_ticker, search_query):
         self.dl.get(form_name, company_ticker, query=search_query)
+    
+    def getByYear(self, form_name, company_ticker, year):
+        self.dl.get(form_name, company_ticker, after= year+"-01-01", before=year+"-12-31")
 
 
         
