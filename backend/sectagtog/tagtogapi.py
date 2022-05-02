@@ -38,7 +38,7 @@ class TagTogAPI:
         #you can append more files to the list in case you want to upload multiple files
         files = [("files", open(filepath, "rb"))]
         response = requests.post(self.tagtogAPIUrl, params=params, auth=auth, files=files)
-        print(response.text)
+        print(response.text) 
 
     #Exports a document by ID in an HTML format
     def export_by_id_html(self, project_name, id):
