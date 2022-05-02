@@ -26,7 +26,7 @@ const Demo = () => {
       <h3 id="search1">TagTog Username</h3> 
       <input type="text" id="user" onkeyup="myFunction()" placeholder="TagTog Username" /> 
       <h3 id="search2">TagTog Password</h3>
-      <input type="text" id="pass" onkeyup="myFunction()" placeholder="TagTog Password" /> 
+      <input type="password" id="pass" onkeyup="myFunction()" placeholder="TagTog Password" /> 
       <h3 id="search3">TagTog Project</h3>
       <input type="text" id="proj" onkeyup="myFunction()" placeholder="TagTog Project Name" /> 
       <h3 id="search3">Form Type</h3>

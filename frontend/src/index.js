@@ -71,19 +71,20 @@ searcher.addEventListener("click", function () {
   fetch(url) 
 
   
+  /*
   window.open(
     url,
     "_blank"
   ); 
   window.close()
+  */
   
-  /*
   var url = "http://www.tagtog.net/" + username.value + "/" + project.value + "/"
   fetch(url) 
   window.open(
     url,
     "_blank"
   ); 
-  */
+  
 
 });

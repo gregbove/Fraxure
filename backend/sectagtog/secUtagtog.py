@@ -31,7 +31,7 @@ class SECTagTog:
         
         """
         # LOCATION e_1, PERSON e_2, ORG e_3 in final code
-        choices = {'PERSON': 'e_1', 'ORG': 'e_2', 'MONEY': 'e_3', 'LOCATION': 'e_4', 'LOC': 'e_5', 'GPE': 'e_6'}
+        choices = {'PERSON': 'e_1', 'ORG': 'e_2', 'MONEY': 'e_3', 'GPE': 'e_4'}
         return choices.get(label, None)
 
     def get_entities(self, spans, pipeline):

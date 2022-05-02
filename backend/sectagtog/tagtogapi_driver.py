@@ -5,8 +5,8 @@ import os
 from tagtogapi import TagTogAPI
 
 def main():
-    t = TagTogAPI('gregbove10', 'password123')
-
+    # t = TagTogAPI('gregbove10', 'password123')
+    x = 1
     #(WORKING) Importing by plaintext
     #t.import_by_plaintext("TestProject", "HELLO WOORLD!!")
 
