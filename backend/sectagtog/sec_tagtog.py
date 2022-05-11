@@ -22,7 +22,7 @@ class SECTagTog:
         self.tagtog.import_by_html(self.project_name, self.dir+ "/" + company_tick + "_" + form_type + ".html")
 
         #Removes the files that were downloaded
-        os.remove(self.dir+ "/" + company_tick + "_" + form_type + ".html")
+        # os.remove(self.dir+ "/" + company_tick + "_" + form_type + ".html")
         # os.remove(self.dir+ "/" + "full-submission.txt")
  
 

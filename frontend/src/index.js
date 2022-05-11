@@ -51,6 +51,7 @@ searcher.addEventListener("click", function () {
   var cik = document.getElementById("cik");
   var pre = document.getElementById("pre");
   var post = document.getElementById("post");
+  var yORn = document.getElementById("yORn");
 
   
   
@@ -61,7 +62,7 @@ searcher.addEventListener("click", function () {
   // var url = "empty"
   if (pre.value !== "") { 
     // url = "not_empty"
-    url = "http://127.0.0.1:5000/tagtog/init/" + username.value + "/" + password.value + "/" + project.value + "/" + type.value + "/" + cik.value + "/" + pre.value + "/" + post.value;
+    url = "http://127.0.0.1:5000/tagtog/init/" + username.value + "/" + password.value + "/" + project.value + "/" + type.value + "/" + cik.value + "/" + pre.value + "/" + post.value + "/" + yORn.value;
   }
 
   // var url = "localhost:5000/tagtog/init/" + username.value + "/" + password.value + "/" + project.value;
@@ -69,15 +70,14 @@ searcher.addEventListener("click", function () {
   // var url = "localhost:5000/tagtog/init/" + username.value + "/" + password.value + "/" + project.value + "/" + type.value + "/" + cik.value + "/" + pre.value + "/" + post.value;
 
   fetch(url) 
-
-  
   /*
   window.open(
     url,
     "_blank"
   ); 
-  window.close()
+  // window.close()
   */
+  
   
   var url = "http://www.tagtog.net/" + username.value + "/" + project.value + "/"
   fetch(url) 
@@ -85,6 +85,7 @@ searcher.addEventListener("click", function () {
     url,
     "_blank"
   ); 
+  
   
 
 });

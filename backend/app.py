@@ -37,9 +37,12 @@ def post_tagtog(form_type, ticker):
     s.mostRecent(form_type, ticker)
     return {"form_type": form_type, "CIK": ticker}
 
-@app.route("/tagtog/init/<ttusername>/<ttpassword>/<projname>/<form_type>/<ticker>/<pre>/<post>")
-def withDates(ttusername, ttpassword, projname, form_type, ticker, pre, post): 
-
-    s = SECTagTog(ttusername, ttpassword, "/Users/gregbove/Desktop/New_Fraxure/Fraxure/", "new.html", projname)
-    s.allBetween(form_type, ticker, pre, post)
-    return {"username": ttusername, "password": ttpassword, "project": projname, "form_type": form_type, "CIK": ticker, "before": pre, "after": post}
+@app.route("/tagtog/init/<ttusername>/<ttpassword>/<projname>/<form_type>/<ticker>/<pre>/<post>/<yORn>")
+def withDates(ttusername, ttpassword, projname, form_type, ticker, pre, post, yORn): 
+    cwd = os.getcwd()
+    print("Directory: " + cwd)
+    cwd = "/home/boveg/y/Fraxure/backend"
+    # s = SECTagTog(ttusername, ttpassword, "/Users/gregbove/Desktop/New_Fraxure/Fraxure/", "new.html", projname)
+    s = SECTagTog(ttusername, ttpassword, cwd, "new.html", projname)
+    s.allBetween(form_type, ticker, pre, post, yORn)
+    return {"username": ttusername, "password": ttpassword, "project": projname, "form_type": form_type, "CIK": ticker, "before": pre, "after": post, "directory": cwd}

@@ -19,7 +19,7 @@ const Demo = () => {
   <body id="body" class="light-theme">  
     <h1>Fraxure</h1>
     <h2>A user friendly web interface for facilitating the process of gathering information from SEC.org</h2>
-    <h2>We hope this site closely resembles that of the SEC so that searches performed there can easily be performed here</h2>
+    <h2>This site aims to closely resemble that of the SEC, so that searches performed there can easily be performed here</h2>
     <button class="linkbtn">Go to SEC.org</button>  
     <p id="msg"></p> 
     <ul>  
@@ -38,7 +38,7 @@ const Demo = () => {
       <input type="text" id="post" onkeyup="myFunction()" placeholder="YYYY-MM-DD" /> 
       <h3 id="search4">Would you like to send invididual sections to a TagTog folder? (Y/N)</h3>
       <p>*** YOU MUST CREATE A FOLDER IN TAGTOG FIRST, AND NAME IT AFTER THE TICKER ***</p>
-      <input type="text" id="folder" onkeyup="myFunction()" placeholder="N" />  
+      <input type="text" id="yORn" onkeyup="myFunction()" placeholder="N" />  
     </ul>  
     <button class="searchbtn">Enter</button>  
     <script src="./index.js"></script>

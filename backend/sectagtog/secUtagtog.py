@@ -17,7 +17,7 @@ class SECTagTog:
         self.user = user
         self.passw = passw
         self.tagtog = TagTogAPI(user, passw)
-        self.sec = SECAPI(directory + fil)
+        self.sec = SECAPI(directory + "/" + fil)
         self.dir = directory
         self.fil = fil
         self.project_name = proj_name
@@ -282,7 +282,7 @@ class SECTagTog:
         #os.remove(self.dir+ "/" + "full-submission.txt")
 
     # CHANGE TO YEARLY
-    def allBetween(self, form_type, company_tick, pre, post):
+    def allBetween(self, form_type, company_tick, pre, post, yORn):
         #Downloads the type of file
         pred = pre.split('-')
         print(pred)
@@ -628,26 +628,27 @@ class SECTagTog:
                             item_text[i] = "Unable to parse into sections. View 'pool' folder in order to find the section you are seeking \nINFO: " + company_tick + ", " + form_type + ", " + predate + ", " + postdate + ', Section' + str(i+1)
                         docs.append(nlp(item_text[i]))
 
-                    for i in range(0, 15):
-                    # Initialize ann.json (specification: https://docs.tagtog.net/anndoc.html#ann-json)
-                        annjson = {}
-                    # Set the document as not confirmed, an annotator will manually confirm whether the annotations are correct
-                        annjson['anncomplete'] = False
-                        annjson['metas'] = {}
-                        annjson['relations'] = []                      
-                    # Transform the spaCy entities into tagtog entities
-                    # print("This is it: " + doc.ents)
-                        annjson['entities'] = self.get_entities(docs[i].ents, pipeline)
+                    if yORn == "Y":
+                        for i in range(0, 15):
+                            # Initialize ann.json (specification: https://docs.tagtog.net/anndoc.html#ann-json)
+                            annjson = {}
+                            # Set the document as not confirmed, an annotator will manually confirm whether the annotations are correct
+                            annjson['anncomplete'] = False
+                            annjson['metas'] = {}
+                            annjson['relations'] = []                      
+                            # Transform the spaCy entities into tagtog entities
+                            # print("This is it: " + doc.ents)
+                            annjson['entities'] = self.get_entities(docs[i].ents, pipeline)
 
-                    # Parameters for the API call 
-                    # see https://docs.tagtog.net/API_documents_v1.html#examples-import-pre-annotated-plain-text-file
-                        folder = "pool/" + company_tick
-                        params = {'owner': MY_USERNAME, 'project': MY_PROJECT, 'output': 'null', 'format': 'default-plus-annjson', 'folder': folder}
-                    # Pre-annotated document composed of the content and the annotations
+                            # Parameters for the API call 
+                            # see https://docs.tagtog.net/API_documents_v1.html#examples-import-pre-annotated-plain-text-file
+                            folder = "pool/" + company_tick
+                            params = {'owner': MY_USERNAME, 'project': MY_PROJECT, 'output': 'null', 'format': 'default-plus-annjson', 'folder': folder}
+                            # Pre-annotated document composed of the content and the annotations
                 #files=[('doc1.txt', text2), ('doc1.ann.json', json.dumps(annjson))]
-                        files=[(company_tick + "_" + form_type + "_" + predate + "_" + postdate + '_Section' + str(i+1) + '.txt', item_text[i]), (company_tick + "_" + form_type + "_" + predate + "_" + postdate + '_Section' + str(i+1) + '.txt.ann.json', json.dumps(annjson))]
+                            files=[(company_tick + "_" + form_type + "_" + predate + "_" + postdate + '_Section' + str(i+1) + '.txt', item_text[i]), (company_tick + "_" + form_type + "_" + predate + "_" + postdate + '_Section' + str(i+1) + '.txt.ann.json', json.dumps(annjson))]
                     # POST request to send the pre-annotated document
-                        response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
+                            response = requests.post(tagtogAPIUrl, params=params, auth=auth, files=files)
                     # HERE
 
                 month = month + 1
