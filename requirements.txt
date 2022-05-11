@@ -47,6 +47,7 @@ python-slugify==5.0.2
 pytz==2021.1
 requests==2.27.1
 sec-api==1.0.8
+sec_edgar_downloader==4.3.0
 Shapely==1.5.9
 six==1.16.0
 smart-open==5.2.1
