@@ -40,10 +40,3 @@ class SECTagTog:
         #Removes the files that were downloaded
         os.remove(newPath)
         os.remove(self.dir+ "/" + "full-submission.txt")
-
-def main():
-    test_api = SECTagTog('ryanmurf9', 'testapipassword123', "TestProject")
-    test_api.byYear("10-K", "CVX", "2020")
-
-if __name__ == "__main__":
-    main()
