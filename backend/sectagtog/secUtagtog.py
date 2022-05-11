@@ -653,11 +653,3 @@ class SECTagTog:
 
                 month = month + 1
             year = year + 1  
-
-
-def main(): 
-    test_api = SECTagTog('gregbove10', 'password123', "", "project_folder")
-    test_api.mostRecent("10-K", "CVX")
-
-if __name__ == "__main__":
-    main()

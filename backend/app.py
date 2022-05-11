@@ -40,9 +40,7 @@ def post_tagtog(form_type, ticker):
 @app.route("/tagtog/init/<ttusername>/<ttpassword>/<projname>/<form_type>/<ticker>/<pre>/<post>/<yORn>")
 def withDates(ttusername, ttpassword, projname, form_type, ticker, pre, post, yORn): 
     cwd = os.getcwd()
-    print("Directory: " + cwd)
-    cwd = "/home/boveg/y/Fraxure/backend"
-    # s = SECTagTog(ttusername, ttpassword, "/Users/gregbove/Desktop/New_Fraxure/Fraxure/", "new.html", projname)
+    print("Directory: " + cwd)  
     s = SECTagTog(ttusername, ttpassword, cwd, "new.html", projname)
     s.allBetween(form_type, ticker, pre, post, yORn)
     return {"username": ttusername, "password": ttpassword, "project": projname, "form_type": form_type, "CIK": ticker, "before": pre, "after": post, "directory": cwd}

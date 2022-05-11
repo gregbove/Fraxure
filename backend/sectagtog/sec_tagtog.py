@@ -25,10 +25,3 @@ class SECTagTog:
         # os.remove(self.dir+ "/" + company_tick + "_" + form_type + ".html")
         # os.remove(self.dir+ "/" + "full-submission.txt")
  
-
-def main():
-    test_api = SECTagTog('ryanmurf9', 'testapipassword123', " ", "TestProject")
-    test_api.mostRecent("10-K", "CVX")
-
-if __name__ == "__main__":
-    main()
